@@ -106,5 +106,5 @@ class Back(Task):
     def _scharr(img):
         # Invert the image to ease edge detection.
         img = 1. - img
-        grey = skc.rgb2grey(img)
+        grey = skc.rgb2gray(img)
         return skf.scharr(grey)

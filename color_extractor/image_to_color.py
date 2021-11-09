@@ -33,7 +33,7 @@ class ImageToColor(Task):
         colors = [self._name.get(c) for c in centers]
         flattened = list({c for l in colors for c in l})
 
-        if self._settings['debug'] is None:
+        if self._settings.get('debug') is None:
             return flattened
 
         colored_labels = np.zeros((labels.shape[0], 3), np.float64)
